@@ -1,2 +1,6 @@
 1. test
+<<<<<<< HEAD
 2. branch
+=======
+3. merge
+>>>>>>> test_branch
