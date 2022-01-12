@@ -81,7 +81,7 @@ def login():
         print("---------66666-----------")
         payload = {
          'id': id_receive,
-         'exp': datetime.utcnow() + timedelta(seconds=60 * 10)  # 로그인 10분 유지
+         'exp': datetime.utcnow() + timedelta(seconds=20)  # 로그인 10분 유지
         }
 
         # ----------------토큰 생성 ----------------------------------------------------------------------
@@ -113,6 +113,25 @@ def membership():
     email_receive = request.form['email_give']
 
     pw_hash = hashlib.sha256(pw_receive.encode('utf-8')).hexdigest()
+
+    """
+    ## 패스워드 confirm 로직 미완성 
+        if (pw_receive != confirm_pwd_receive):
+            return jsonify({'msg': '패스워드 재입력 확인 바랍니다.'})
+        else:
+            find_id = db.user_info.find_one({'ID': id_receive})
+
+            if (find_id == None):
+                doc = {
+                    'ID': id_receive,
+                    'PWD': pw_receive,
+                    'EMAIL': email_receive
+                }
+                db.user_info.insert_one(doc)
+                return jsonify({'msg': '회원가입 완료'})
+            else:
+                return jsonify({'msg': '아이디가 이미 존재합니다!'})
+     """
 
     find_id = db.user_info.find_one({'ID': id_receive})
 
