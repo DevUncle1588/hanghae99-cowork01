@@ -93,7 +93,7 @@ def login():
         # ----------------------------------------------------------------------------------------------
 
         print("---------777777-----------")
-        return jsonify({'result': 'success', 'token': token, 's_msg': '아이디/비밀번호가 맞습니다.'})
+        return jsonify({'result': 'success', 'token': token.decode('utf-8'), 's_msg': '아이디/비밀번호가 맞습니다.'})
         # return jsonify({'result': 'success',  's_msg': '아이디/비밀번호가 맞습니다.'})
     else:
         return jsonify({'result': 'fail', 'f_msg': '아이디/비밀번호가 일치하지 않습니다.'})
