@@ -1,0 +1,107 @@
+<!Doctype html>
+<html lang="ko">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        -->
+
+        <!-- CSS -->
+        <link rel="stylesheet"  href="{{url_for('static', filename='css/default.css')}}"/>
+
+        <!-- JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        -->
+
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/f1b51e4ba8.js" crossorigin="anonymous"></script>
+
+        <!-- font : google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+        <title>J-GATI JOIN MEMBER PAGE</title>
+
+        <script>
+            function join_mem() {
+                let join_id = $('#join_id').val();
+                let join_pwd = $('#join_password').val();
+                let confirm_pwd = $('#join_password_check').val();
+                let join_email = $('#join_email').val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/api/membership",
+                    data: {id_give: join_id, pwd_give: join_pwd, confirm_pwd_give: confirm_pwd, email_give: join_email},
+                    success: function (response) { // 성공하면
+                        if (response['result'] == 'success') {
+                            alert(response['msg']);
+                            window.location.href = "/"
+                        } else {
+                            alert(response['msg'])
+                        }
+                    }
+                })
+            }
+            function chk() {
+                let join_id = $('#join_id').val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/api/check",
+                    data: {id_give: join_id},
+                    success: function (response) { // 성공하면
+                        if (response['result'] == 'success') {
+                            alert(response['msg']);
+                        } else {
+                            alert(response['msg'])
+                        }
+                    }
+                })
+            }
+	</script>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="main_login">
+                <div class="main_bg"></div>
+                <video autoplay muted loop id="myVideo">
+                  <source src="{{url_for('static', filename='video/bg_video.mp4')}}" type="video/mp4">
+                </video>
+                <div class="box_login">
+                    <!-- flex형식 -->
+                    <h3 class="box_loginLogo logo"><span>J</span>-GATI</h3>
+                    <div class="box_loginInput layer_join">
+                        <div class="li_input type_id">
+                            <input id="join_id" class="input_basic" placeholder="ID" type="text">
+                            <button onclick="chk()" id="btn-id-chk" type="button" class="btn_basic bg_pink c_white">중복체크</button>
+                        </div>
+                        <div class="li_input">
+                            <input id="join_password" class="input_basic bg_black c_white" type="password" placeholder="PASSWORD">
+                        </div>
+                        <div class="li_input">
+                            <input id="join_password_check" class="input_basic bg_black c_white" type="password" placeholder="CONFIRM PASSWORD">
+                        </div>
+                        <div class="li_input type_mail">
+                            <input id="join_email" class="input_basic bg_black c_white" type="email" placeholder="E-MAIL">
+                        </div>
+                        <button onclick="join_mem()" id="btn-join-submit" type="button" class="btn_login bg_pink c_white">회원가입</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

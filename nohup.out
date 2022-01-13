@@ -1,0 +1,2025 @@
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.31.93.205:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 120-322-082
+210.205.134.193 - - [13/Jan/2022 18:11:20] "GET / HTTP/1.1" 302 -
+210.205.134.193 - - [13/Jan/2022 18:11:20] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:11:21] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 18:11:21] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:11:22] "GET /static/css/default.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:11:22] "GET /static/css/common.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:11:22] "GET /static/css/main.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:11:22] "GET /static/css/reset.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:11:22] "GET /5000 HTTP/1.1" 404 -
+210.205.134.193 - - [13/Jan/2022 18:11:22] "GET /static/css/default.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:11:22] "GET /favicon.ico HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 18:11:22] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:11:23] "GET /static/css/common.css HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:11:23] "GET /static/css/main.css HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:11:23] "GET /static/css/reset.css HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:11:23] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:11:24] "GET /favicon.ico HTTP/1.1" 404 -
+210.205.134.193 - - [13/Jan/2022 18:11:25] "GET /favicon.ico HTTP/1.1" 404 -
+182.211.26.48 - - [13/Jan/2022 18:11:28] "GET / HTTP/1.1" 302 -
+182.211.26.48 - - [13/Jan/2022 18:11:28] "GET /relogin HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:11:28] "GET /static/css/default.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:11:29] "GET /static/css/common.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:11:29] "GET /static/css/main.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:11:29] "GET /static/css/reset.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:11:29] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+72.21.217.18 - - [13/Jan/2022 18:11:29] "POST /sns/endpoint HTTP/1.1" 404 -
+182.211.26.48 - - [13/Jan/2022 18:11:30] "GET /favicon.ico HTTP/1.1" 404 -
+182.211.26.48 - - [13/Jan/2022 18:11:36] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:37] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:38] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:38] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:38] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:38] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:40] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:40] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:40] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:40] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:41] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:41] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:41] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:42] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:42] "POST /api/login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 90, in login
+    find_user = db.user_info.find_one({'ID': id_receive, 'PWD': pw_hash})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:44] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:11:44] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:11:44] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:11:44] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:11:48] "GET /api/login HTTP/1.1" 405 -
+211.108.87.34 - - [13/Jan/2022 18:11:49] "GET /joinGet HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:11:49] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:11:50] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:11:50] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:11:50] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:11:50] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:11:51] "GET /joinGet HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:11:52] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:11:52] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:11:52] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:11:52] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:11:53] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:11:57] "POST /api/membership HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 132, in membership
+    find_id = db.user_info.find_one({'ID': id_receive})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:11:59] "POST /api/membership HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 132, in membership
+    find_id = db.user_info.find_one({'ID': id_receive})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+211.108.87.34 - - [13/Jan/2022 18:12:00] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:12:00] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:12:00] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:12:00] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:12:01] "POST /api/membership HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 132, in membership
+    find_id = db.user_info.find_one({'ID': id_receive})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+182.211.26.48 - - [13/Jan/2022 18:12:12] "GET /list HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 62, in list_page
+    payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
+  File "/usr/lib/python3/dist-packages/jwt/api_jwt.py", line 70, in decode
+    payload, signing_input, header, signature = self._load(jwt)
+  File "/usr/lib/python3/dist-packages/jwt/api_jws.py", line 161, in _load
+    binary_type))
+jwt.exceptions.DecodeError: Invalid token type. Token must be a <class 'bytes'>
+182.211.26.48 - - [13/Jan/2022 18:12:12] "GET /list?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:12:12] "GET /list?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:12:12] "GET /list?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:12:12] "GET /list?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:12:13] "GET /list?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+72.21.217.184 - - [13/Jan/2022 18:12:17] "POST /sns/endpoint HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 18:12:32] "POST /api/membership HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 132, in membership
+    find_id = db.user_info.find_one({'ID': id_receive})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+ * Detected change in '/home/ubuntu/final/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 120-322-082
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.31.93.205:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 120-322-082
+210.205.134.193 - - [13/Jan/2022 18:14:22] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:14:24] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:14:26] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:14:26] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:14:26] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:14:26] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:14:27] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:14:27] "GET /joinGet HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:14:29] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:14:29] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:14:29] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:14:29] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:14:30] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:14:39] "POST /api/membership HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 132, in membership
+    find_id = db.user_info.find_one({'ID': id_receive})
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/collection.py", line 1114, in find_one
+    for result in cursor.limit(-1):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1159, in next
+    if len(self.__data) or self._refresh():
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 1080, in _refresh
+    self.__send_message(q)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/cursor.py", line 972, in __send_message
+    operation, self._unpack_response, address=self.__address)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1217, in _run_operation
+    address=address, retryable=isinstance(operation, message._Query))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1313, in _retryable_read
+    return func(session, server, sock_info, secondary_ok)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1213, in _cmd
+    unpack_res)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/server.py", line 129, in run_operation
+    _check_command_response(first, sock_info.max_wire_version)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pymongo/helpers.py", line 170, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+72.21.217.216 - - [13/Jan/2022 18:14:48] "POST /sns/endpoint HTTP/1.1" 404 -
+72.21.217.190 - - [13/Jan/2022 18:14:52] "POST /sns/endpoint HTTP/1.1" 404 -
+72.21.217.40 - - [13/Jan/2022 18:14:52] "POST /sns/endpoint HTTP/1.1" 404 -
+72.21.217.222 - - [13/Jan/2022 18:15:36] "POST /sns/endpoint HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 18:16:22] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:16:43] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+ * Detected change in '/home/ubuntu/final/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 120-322-082
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.31.93.205:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 120-322-082
+210.205.134.193 - - [13/Jan/2022 18:18:53] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:18:56] "POST /api/membership HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:18:58] "GET / HTTP/1.1" 302 -
+210.205.134.193 - - [13/Jan/2022 18:18:58] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:19:00] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:19:00] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:19:00] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:19:00] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:19:01] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:19:01] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 18:19:01] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:19:01] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:02] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:02] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:02] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:02] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:19:07] "GET /joinGet HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:19:08] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:08] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:08] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:08] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:09] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:19:16] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:16] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:16] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:16] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:19:17] "POST /api/login HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:19:18] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:19:19] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:19:20] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:19:20] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:19:20] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:19:20] "GET / HTTP/1.1" 302 -
+221.149.189.140 - - [13/Jan/2022 18:19:20] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:19:20] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:19:20] "GET /static/css/default.css HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:19:21] "GET /static/css/common.css HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:19:21] "GET /static/css/main.css HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:19:21] "GET /static/css/reset.css HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:19:21] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:19:22] "GET /favicon.ico HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 18:19:30] "POST /api/membership HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:19:32] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 18:19:32] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:19:32] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:33] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:33] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:33] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:33] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:19:38] "POST /api/login HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:19:40] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:19:40] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:41] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:41] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:41] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:19:41] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+72.21.217.158 - - [13/Jan/2022 18:19:46] "POST /sns/endpoint HTTP/1.1" 404 -
+221.149.189.140 - - [13/Jan/2022 18:19:50] "GET /joinGet HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:19:51] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:19:51] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:19:51] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:19:51] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:19:51] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:19:53] "GET / HTTP/1.1" 302 -
+210.205.134.193 - - [13/Jan/2022 18:19:53] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:19:55] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:19:55] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:19:55] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:19:55] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:19:56] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:19:59] "GET /joinGet HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:20:01] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:20:02] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:20:02] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:20:02] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:20:02] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:20:04] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:20:06] "GET /relogin HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:20:07] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:20:07] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:20:07] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:20:07] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:20:07] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:20:14] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:20:14] "GET /static/css/default.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:20:14] "GET /static/css/common.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:20:14] "GET /static/css/main.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:20:14] "GET /static/css/reset.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:20:15] "GET /favicon.ico HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 18:20:26] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:20:26] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:20:26] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:20:26] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:20:42] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:20:43] "GET /static/css/default.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:20:43] "GET /static/css/common.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:20:43] "GET /static/css/main.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:20:43] "GET /static/css/reset.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:20:55] "GET / HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:20:55] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:20:55] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:20:55] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:20:55] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:20:56] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:20:57] "GET /favicon.ico HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 18:20:59] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 18:21:00] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:21:00] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:00] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:00] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:00] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:01] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:21:03] "GET /joinGet HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:21:03] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:03] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:03] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:03] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:04] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:21:20] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:20] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:20] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:20] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:55] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:21:57] "POST /api/login HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:21:58] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:21:59] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:59] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:59] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:21:59] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:00] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+94.243.254.103 - - [13/Jan/2022 18:22:01] "GET http://unconsciousness.shop:80/ HTTP/1.0" 302 -
+211.108.87.34 - - [13/Jan/2022 18:22:30] "POST /memo HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:22:31] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:22:31] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:32] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:32] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:32] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:35] "POST /memo/delete HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:22:37] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:22:37] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:37] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:37] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:37] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:42] "POST /memo HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:22:43] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:22:44] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:44] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:44] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:44] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:47] "POST /memo/fix HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:22:48] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:22:48] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:49] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:49] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:22:49] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:23:12] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:23:42] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:23:55] "GET /list HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 62, in list_page
+    payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
+  File "/usr/lib/python3/dist-packages/jwt/api_jwt.py", line 70, in decode
+    payload, signing_input, header, signature = self._load(jwt)
+  File "/usr/lib/python3/dist-packages/jwt/api_jws.py", line 161, in _load
+    binary_type))
+jwt.exceptions.DecodeError: Invalid token type. Token must be a <class 'bytes'>
+182.211.26.48 - - [13/Jan/2022 18:23:55] "GET /list?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:23:55] "GET /list?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:23:55] "GET /list?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:23:55] "GET /list?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:23:56] "GET /list?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:24:08] "GET /list HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2091, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2076, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/final/app.py", line 62, in list_page
+    payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
+  File "/usr/lib/python3/dist-packages/jwt/api_jwt.py", line 70, in decode
+    payload, signing_input, header, signature = self._load(jwt)
+  File "/usr/lib/python3/dist-packages/jwt/api_jws.py", line 161, in _load
+    binary_type))
+jwt.exceptions.DecodeError: Invalid token type. Token must be a <class 'bytes'>
+182.211.26.48 - - [13/Jan/2022 18:24:09] "GET /list?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:24:09] "GET /list?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:24:09] "GET /list?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:24:09] "GET /list?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:24:13] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:24:13] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:24:13] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:24:13] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:24:13] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:24:14] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:24:25] "GET / HTTP/1.1" 302 -
+182.211.26.48 - - [13/Jan/2022 18:24:25] "GET /relogin HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:24:26] "GET /static/css/default.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:24:26] "GET /static/css/common.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:24:26] "GET /static/css/reset.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:24:26] "GET /static/css/main.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:24:26] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:24:28] "GET /favicon.ico HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 18:24:31] "GET / HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:24:31] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:24:32] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:24:32] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:24:32] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:24:32] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:24:42] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+72.21.217.11 - - [13/Jan/2022 18:24:45] "POST /sns/endpoint HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 18:25:30] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:26:30] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:27:46] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:27:48] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+72.21.217.106 - - [13/Jan/2022 18:29:16] "POST /sns/endpoint HTTP/1.1" 404 -
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.31.93.205:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 120-322-082
+210.205.134.193 - - [13/Jan/2022 18:30:15] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:30:17] "GET /joinGet HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:30:19] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:30:19] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:30:19] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:30:19] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:30:20] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:30:25] "GET / HTTP/1.1" 302 -
+210.205.134.193 - - [13/Jan/2022 18:30:26] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:30:27] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:30:28] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:30:28] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:30:28] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:30:28] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:30:31] "GET /joinGet HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:30:33] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:30:33] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:30:33] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:30:33] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:30:34] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:31:11] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:31:53] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 18:31:53] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:31:54] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:31:54] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:31:54] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:31:54] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:31:55] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:33:01] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.31.93.205:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 120-322-082
+211.108.87.34 - - [13/Jan/2022 18:35:28] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:35:33] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:35:40] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:35:43] "GET /joinGet HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:35:44] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:35:45] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:35:45] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:35:45] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:35:45] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:35:48] "POST /api/check HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:36:02] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+72.21.217.54 - - [13/Jan/2022 18:36:27] "POST /sns/endpoint HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 18:36:33] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:36:35] "POST /api/membership HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:36:36] "GET / HTTP/1.1" 302 -
+210.205.134.193 - - [13/Jan/2022 18:36:36] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:36:38] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:36:39] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:36:39] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:36:39] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:36:39] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:36:43] "POST /api/login HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:36:45] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:36:47] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:36:47] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:36:47] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:36:47] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:36:47] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:36:58] "GET / HTTP/1.1" 302 -
+210.205.134.193 - - [13/Jan/2022 18:36:58] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:37:00] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:00] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:00] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:00] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:01] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:37:02] "POST /api/login HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:37:04] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:37:05] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:06] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:06] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:06] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:06] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:37:33] "POST /memo/tj HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:37:35] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:37:36] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:37] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:37] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:37] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:42] "POST /memo/cc HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:37:43] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:37:45] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:45] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:45] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:37:45] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:38:08] "POST /memo HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:38:10] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:38:11] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:38:12] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:38:12] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:38:12] "GET /static/css/reset.css HTTP/1.1" 304 -
+72.21.217.71 - - [13/Jan/2022 18:38:21] "POST /sns/endpoint HTTP/1.1" 404 -
+210.205.134.193 - - [13/Jan/2022 18:38:32] "POST /memo HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:38:33] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:38:35] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:38:35] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:38:35] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:38:35] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:38:59] "GET / HTTP/1.1" 302 -
+210.205.134.193 - - [13/Jan/2022 18:39:00] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:39:01] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:02] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:02] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:02] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:02] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:39:06] "POST /api/login HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:39:07] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:39:09] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:09] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:09] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:09] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:09] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:39:11] "GET / HTTP/1.1" 302 -
+210.205.134.193 - - [13/Jan/2022 18:39:12] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:39:13] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:14] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:14] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:14] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:14] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:39:15] "GET /joinGet HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:39:17] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:18] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:18] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:18] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:18] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:39:20] "POST /api/check HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:39:27] "POST /api/membership HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:39:28] "GET /joinGet HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:39:30] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:30] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:30] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:30] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:36] "POST /api/membership HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:39:37] "GET / HTTP/1.1" 302 -
+210.205.134.193 - - [13/Jan/2022 18:39:37] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:39:39] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:39] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:39] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:39] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:39:40] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:39:44] "POST /api/login HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:14] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:16] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:16] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:16] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:16] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:17] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:40:21] "POST /memo/tj HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:22] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:23] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:24] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:24] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:24] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:28] "POST /memo/tj HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:29] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:29] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:40:30] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:31] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:31] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:31] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:33] "POST /memo/tj HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:34] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:35] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:36] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:36] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:36] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:38] "POST /memo/cc HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:39] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:40] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:40] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:40] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:40] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:43] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:40:44] "POST /memo/tj HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:45] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:47] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:47] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:47] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:47] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:49] "POST /memo/cc HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:50] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:40:52] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:52] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:52] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:52] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:40:53] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:41:02] "POST /memo/cc HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:41:03] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:41:05] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:41:05] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:41:05] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:41:05] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:41:25] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 18:41:25] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:41:25] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:41:26] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:41:26] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:41:26] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:41:26] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:42:52] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 18:42:52] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:42:52] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:42:53] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:42:53] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:42:53] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:42:53] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:43:03] "POST /api/login HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:43:04] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:43:04] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:05] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:05] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:05] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:05] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:43:18] "POST /memo/delete HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:43:20] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:43:20] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:20] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:20] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:20] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:40] "POST /memo HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:43:42] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:43:42] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:42] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:42] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:42] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:49] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 18:43:49] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:43:50] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:50] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:50] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:50] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:51] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:43:52] "GET /joinGet HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:43:53] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:53] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:53] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:53] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:43:54] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:43:58] "POST /api/check HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:01] "POST /api/check HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:05] "POST /api/membership HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:07] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 18:44:07] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:07] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:08] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:08] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:08] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:08] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:44:12] "POST /api/login HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:13] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:13] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:14] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:14] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:14] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:14] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:44:19] "POST /memo/tj HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:20] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:20] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:21] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:21] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:21] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:23] "POST /memo/cc HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:23] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:24] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:24] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:24] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:24] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:25] "POST /memo/tj HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:27] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:28] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:28] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:28] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:28] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:36] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 18:44:36] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:36] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:37] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:37] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:37] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:37] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:44:39] "POST /api/login HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:40] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:41] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:41] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:41] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:41] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:42] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:44:43] "POST /memo/tj HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:44] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:45] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:45] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:45] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:45] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:46] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:44:50] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 18:44:50] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:50] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:51] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:51] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:51] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:51] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:44:52] "GET /joinGet HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:44:53] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:53] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:53] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:53] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:44:54] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.220.73.7 - - [13/Jan/2022 18:45:41] "GET /relogin HTTP/1.1" 200 -
+121.53.180.2 - - [13/Jan/2022 18:45:41] "GET /relogin HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:45:44] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:45:46] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:46:03] "GET /relogin HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:46:03] "GET /static/css/default.css HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:46:03] "GET /robots.txt HTTP/1.1" 404 -
+221.149.189.140 - - [13/Jan/2022 18:46:04] "GET /static/css/common.css HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:46:04] "GET /static/css/main.css HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:46:04] "GET /static/css/reset.css HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:46:04] "GET /robots.txt HTTP/1.1" 404 -
+221.149.189.140 - - [13/Jan/2022 18:46:04] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:46:05] "GET /favicon.ico HTTP/1.1" 404 -
+221.149.189.140 - - [13/Jan/2022 18:46:39] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+72.21.217.219 - - [13/Jan/2022 18:47:15] "POST /sns/endpoint HTTP/1.1" 404 -
+221.149.189.140 - - [13/Jan/2022 18:47:22] "GET /joinGet HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:47:22] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:47:22] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:47:22] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:47:22] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:47:23] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:47:24] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:47:30] "POST /api/check HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:47:31] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+72.21.217.71 - - [13/Jan/2022 18:47:32] "POST /sns/endpoint HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 18:47:36] "GET /joinGet HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:47:36] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:47:36] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:47:36] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:47:36] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:47:37] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:47:53] "GET /joinGet HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:47:53] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:47:54] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:47:54] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:47:54] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:01] "GET / HTTP/1.1" 302 -
+221.149.189.140 - - [13/Jan/2022 18:48:01] "GET /relogin HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:48:01] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:02] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:02] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:02] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:02] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:48:17] "GET /joinGet HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:48:18] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:18] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:18] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:18] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:19] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:48:24] "POST /api/check HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:48:28] "POST /api/check HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:48:51] "GET /relogin HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:48:52] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:52] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:52] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:52] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:48:52] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:49:05] "GET /joinGet HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:49:05] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:49:05] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:49:05] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:49:05] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:49:06] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:49:16] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:49:18] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:49:26] "GET /relogin HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:49:26] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:49:26] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:49:26] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:49:26] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:49:27] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:49:38] "GET /joinGet HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:49:39] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:49:39] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:49:39] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:49:39] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:49:39] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:49:45] "POST /api/check HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:50:00] "POST /api/membership HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:50:02] "GET / HTTP/1.1" 302 -
+221.149.189.140 - - [13/Jan/2022 18:50:02] "GET /relogin HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:50:02] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:03] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:03] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:03] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:03] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:50:14] "POST /api/login HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:50:16] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:50:16] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:16] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:16] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:16] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:17] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:50:43] "POST /memo HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:50:45] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:50:45] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:45] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:45] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:45] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:50] "POST /memo/fix HTTP/1.1" 200 -
+37.49.225.132 - - [13/Jan/2022 18:50:53] "GET /.env HTTP/1.1" 404 -
+37.49.225.132 - - [13/Jan/2022 18:50:53] "POST / HTTP/1.1" 405 -
+221.149.189.140 - - [13/Jan/2022 18:50:54] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:50:55] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:55] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:55] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:50:55] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:03] "POST /memo/fix HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:51:04] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:51:05] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:05] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:05] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:05] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:08] "POST /memo/delete HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:51:09] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:51:09] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:10] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:10] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:10] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:12] "POST /memo/tj HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:51:14] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:51:14] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:14] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:14] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:14] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:16] "POST /memo/cc HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:51:18] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:51:18] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:19] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:19] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:19] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:24] "GET / HTTP/1.1" 302 -
+221.149.189.140 - - [13/Jan/2022 18:51:25] "GET /relogin HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:51:25] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:25] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:25] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:25] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:51:26] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.31.93.205:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 120-322-082
+221.149.189.140 - - [13/Jan/2022 18:53:07] "GET /relogin HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:53:07] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:07] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:07] "GET /static/css/main.css HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:53:07] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:08] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:53:08] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:53:12] "GET / HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:53:12] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:53:13] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:14] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:14] "GET /static/css/main.css HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:53:14] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:14] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:53:24] "GET /joinGet HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:53:24] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:25] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:25] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:25] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:25] "GET / HTTP/1.1" 302 -
+221.149.189.140 - - [13/Jan/2022 18:53:25] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:53:25] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:53:27] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:27] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:27] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:27] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:30] "POST /api/check HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:53:33] "POST /api/login HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:53:34] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:53:35] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:36] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:36] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:36] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:36] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:53:38] "GET / HTTP/1.1" 302 -
+210.205.134.193 - - [13/Jan/2022 18:53:38] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:53:40] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:40] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:40] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:40] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:41] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 18:53:43] "GET /joinGet HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:53:43] "POST /api/membership HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:53:44] "GET /static/css/default.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:45] "GET /static/css/common.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:45] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:45] "GET /static/css/reset.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:53:45] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:53:45] "GET / HTTP/1.1" 302 -
+221.149.189.140 - - [13/Jan/2022 18:53:45] "GET /relogin HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:53:46] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:46] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:46] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:46] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:47] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:53:56] "POST /api/login HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:53:57] "GET /list HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 18:53:58] "POST /api/membership HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:53:58] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:58] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:58] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:58] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:53:59] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:54:24] "POST /memo HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:54:26] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:54:26] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:27] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:27] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:27] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:33] "POST /memo/fix HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:54:35] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:54:35] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:35] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:35] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:35] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:38] "POST /memo/delete HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:54:39] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:54:40] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:40] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:40] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:40] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:43] "POST /memo/tj HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:54:44] "GET /list HTTP/1.1" 200 -
+72.21.217.98 - - [13/Jan/2022 18:54:44] "POST /sns/endpoint HTTP/1.1" 404 -
+221.149.189.140 - - [13/Jan/2022 18:54:44] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:45] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:45] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:45] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:47] "POST /memo/cc HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:54:49] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:54:49] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:49] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:49] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:49] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:54:54] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:54:54] "GET / HTTP/1.1" 302 -
+221.149.189.140 - - [13/Jan/2022 18:54:55] "GET /relogin HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 18:54:55] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:56] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:56] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:56] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 18:54:56] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:56:39] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+72.21.217.19 - - [13/Jan/2022 18:56:52] "POST /sns/endpoint HTTP/1.1" 404 -
+221.149.189.140 - - [13/Jan/2022 18:57:06] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 18:57:09] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:57:49] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:58:06] "GET / HTTP/1.1" 302 -
+182.211.26.48 - - [13/Jan/2022 18:58:06] "GET /relogin HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:58:07] "GET /static/css/default.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:58:07] "GET /static/css/main.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:58:07] "GET /static/css/common.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:58:07] "GET /static/css/reset.css HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:58:08] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:58:10] "POST /api/login HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:58:11] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:58:12] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:58:12] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:58:12] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:58:12] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:58:12] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:58:14] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:58:17] "POST /api/login HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:58:19] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:58:19] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:58:20] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:58:20] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:58:20] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:58:20] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 18:59:22] "POST /memo HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:59:23] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 18:59:24] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:59:24] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:59:24] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 18:59:24] "GET /static/css/main.css HTTP/1.1" 304 -
+210.205.134.193 - - [13/Jan/2022 18:59:28] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 18:59:56] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 18:59:56] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:59:56] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:59:57] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:59:57] "GET /static/css/main.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 18:59:57] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 18:59:57] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:00:01] "POST /api/login HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:00:08] "POST /api/login HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:00:08] "GET /relogin HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:00:08] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:00:09] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:00:09] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:00:09] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:00:09] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:00:10] "POST /api/login HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:00:10] "GET /favicon.ico HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 19:00:13] "GET /joinGet HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:00:13] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:00:14] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:00:14] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:00:14] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:00:14] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:00:16] "POST /api/membership HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:00:16] "GET / HTTP/1.1" 302 -
+182.211.26.48 - - [13/Jan/2022 19:00:17] "GET /relogin HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:00:17] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:00:18] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:00:18] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:00:18] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:00:18] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:00:19] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 19:00:20] "GET /relogin HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:00:20] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:00:21] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:00:21] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:00:21] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:00:21] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:00:22] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:00:22] "GET /static/css/default.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:00:23] "GET /static/css/main.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:00:23] "GET /static/css/common.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:00:23] "GET /static/css/reset.css HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:00:23] "GET /favicon.ico HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 19:00:23] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:00:25] "POST /api/login HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:00:28] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:00:28] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:00:28] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:00:28] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:00:32] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:00:34] "POST /api/login HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:00:35] "POST /api/login HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:00:43] "GET /joinGet HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:00:43] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:00:43] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:00:43] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:00:43] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:00:44] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:00:47] "POST /api/check HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:00:48] "GET /joinGet HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:00:49] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:00:49] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:00:49] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:00:49] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:00:50] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:00:53] "POST /api/check HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:00:57] "POST /api/login HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:00:59] "GET /joinGet HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:01:00] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:01:00] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:01:00] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:01:00] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:01:01] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:01:06] "POST /api/membership HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:01:07] "GET / HTTP/1.1" 302 -
+211.108.87.34 - - [13/Jan/2022 19:01:08] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:01:08] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:01:08] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:01:08] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:01:08] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:01:09] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:01:10] "POST /api/login HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:01:11] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:01:12] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:01:12] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:01:12] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:01:12] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:01:13] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:01:36] "GET /joinGet HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:01:37] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:01:37] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:01:37] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:01:37] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:01:38] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:01:52] "POST /api/membership HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:01:54] "GET / HTTP/1.1" 302 -
+182.211.26.48 - - [13/Jan/2022 19:01:54] "GET /relogin HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:01:55] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:01:55] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:01:55] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:01:55] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:01:56] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 19:03:48] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:04:30] "GET /joinGet HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:04:30] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:04:31] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:04:31] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:04:31] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:04:31] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+72.21.217.220 - - [13/Jan/2022 19:04:47] "POST /sns/endpoint HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 19:05:03] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:05:11] "GET /joinGet HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:05:12] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:12] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:12] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:12] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:13] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:05:30] "POST /api/membership HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:05:32] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:05:36] "POST /api/membership HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:05:38] "GET / HTTP/1.1" 302 -
+182.211.26.48 - - [13/Jan/2022 19:05:39] "GET /relogin HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:05:39] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:39] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:39] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:39] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:40] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 19:05:45] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:05:46] "POST /api/login HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:05:48] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:05:48] "GET /joinGet HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:05:48] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:05:48] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:48] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:48] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:48] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:05:48] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:05:48] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:05:48] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:49] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 19:05:49] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:05:51] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:51] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:51] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:05:51] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:05:55] "POST /api/check HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:06:03] "POST /memo/tj HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:06:04] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:06:05] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:05] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:05] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:05] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:08] "POST /api/membership HTTP/1.1" 200 -
+72.21.217.48 - - [13/Jan/2022 19:06:08] "POST /sns/endpoint HTTP/1.1" 404 -
+211.108.87.34 - - [13/Jan/2022 19:06:09] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:06:09] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:09] "POST /memo/cc HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:06:10] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:10] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:10] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:10] "GET / HTTP/1.1" 302 -
+221.149.189.140 - - [13/Jan/2022 19:06:10] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:06:10] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 19:06:10] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:11] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:11] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:11] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:11] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:06:11] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:11] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:06:12] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:12] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:12] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:16] "POST /memo/tj HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:06:17] "POST /api/login HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:06:18] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:06:18] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:06:18] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:18] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:19] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:19] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:19] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:19] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:19] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:19] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:19] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:06:24] "POST /api/login HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:06:25] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:06:25] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:26] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:26] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:26] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:26] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:06:30] "GET / HTTP/1.1" 302 -
+182.211.26.48 - - [13/Jan/2022 19:06:30] "GET /relogin HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:06:30] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:31] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:31] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:31] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:31] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 19:06:39] "POST /memo HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:06:40] "GET /joinGet HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:06:40] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:40] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:40] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:40] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:41] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 19:06:41] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:06:41] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:42] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:42] "GET / HTTP/1.1" 302 -
+221.149.189.140 - - [13/Jan/2022 19:06:42] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:42] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:42] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:06:42] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:43] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:43] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:43] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:43] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:06:44] "GET /joinGet HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:06:45] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:45] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:45] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:45] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:45] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:06:48] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:06:50] "POST /api/membership HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:06:51] "GET /joinGet HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:06:51] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:51] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:51] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:51] "GET /static/css/reset.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:06:52] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+221.149.189.140 - - [13/Jan/2022 19:06:52] "POST /memo/fix HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:06:54] "GET /list HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:06:54] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:55] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:55] "POST /api/membership HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:06:55] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:06:55] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:56] "GET / HTTP/1.1" 302 -
+182.211.26.48 - - [13/Jan/2022 19:06:56] "GET /relogin HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:06:57] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:57] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:57] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:57] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:06:58] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:07:03] "POST /api/login HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:07:05] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:07:05] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:05] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:05] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:05] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:06] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:07:08] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:08] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:08] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:08] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:16] "POST /memo/tj HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:07:17] "GET /relogin HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:07:17] "GET /static/css/default.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:07:17] "GET /static/css/common.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:07:17] "GET /static/css/main.css HTTP/1.1" 304 -
+211.108.87.34 - - [13/Jan/2022 19:07:17] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:18] "GET /list HTTP/1.1" 200 -
+211.108.87.34 - - [13/Jan/2022 19:07:18] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:07:18] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:18] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:18] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:18] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:21] "POST /memo/tj HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:07:23] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:07:23] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:24] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:24] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:24] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:25] "POST /memo/cc HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:07:27] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:07:27] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:27] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:27] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:27] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:51] "POST /memo HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:07:53] "GET /relogin HTTP/1.1" 200 -
+221.149.189.140 - - [13/Jan/2022 19:07:53] "GET /static/css/default.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:07:53] "GET /static/css/common.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:07:53] "GET /static/css/main.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:07:53] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:07:54] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+182.211.26.48 - - [13/Jan/2022 19:07:54] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:07:54] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:55] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:55] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:07:55] "GET /static/css/reset.css HTTP/1.1" 304 -
+221.149.189.140 - - [13/Jan/2022 19:07:55] "GET /favicon.ico HTTP/1.1" 404 -
+182.211.26.48 - - [13/Jan/2022 19:08:04] "POST /memo/fix HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:08:06] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:08:06] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:06] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:06] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:06] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:12] "POST /memo/fix HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:08:14] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:08:14] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:15] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:15] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:15] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:18] "POST /memo/delete HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:08:19] "GET /list HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:08:20] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:20] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:20] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:20] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:26] "GET / HTTP/1.1" 302 -
+182.211.26.48 - - [13/Jan/2022 19:08:26] "GET /relogin HTTP/1.1" 200 -
+182.211.26.48 - - [13/Jan/2022 19:08:27] "GET /static/css/default.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:27] "GET /static/css/main.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:27] "GET /static/css/common.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:27] "GET /static/css/reset.css HTTP/1.1" 304 -
+182.211.26.48 - - [13/Jan/2022 19:08:27] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+211.108.87.34 - - [13/Jan/2022 19:08:54] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+210.205.134.193 - - [13/Jan/2022 19:09:42] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 19:09:43] "GET /static/css/default.css HTTP/1.1" 200 -
+1.225.35.132 - - [13/Jan/2022 19:09:43] "GET /relogin HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 19:09:44] "GET /static/css/common.css HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 19:09:44] "GET /static/css/reset.css HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 19:09:44] "GET /static/css/main.css HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 19:09:44] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+1.225.35.132 - - [13/Jan/2022 19:09:45] "GET /static/css/default.css HTTP/1.1" 200 -
+210.205.134.193 - - [13/Jan/2022 19:09:46] "GET /favicon.ico HTTP/1.1" 404 -
+1.225.35.132 - - [13/Jan/2022 19:09:46] "GET /static/css/main.css HTTP/1.1" 200 -
+1.225.35.132 - - [13/Jan/2022 19:09:46] "GET /static/css/common.css HTTP/1.1" 200 -
+1.225.35.132 - - [13/Jan/2022 19:09:46] "GET /static/css/reset.css HTTP/1.1" 200 -
+1.225.35.132 - - [13/Jan/2022 19:09:49] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+167.172.23.103 - - [13/Jan/2022 19:12:26] "GET /.env HTTP/1.1" 404 -
+167.172.23.103 - - [13/Jan/2022 19:12:26] "POST / HTTP/1.1" 405 -
+210.205.134.193 - - [13/Jan/2022 19:14:35] "GET /static/video/bg_video.mp4 HTTP/1.1" 206 -
+72.21.217.108 - - [13/Jan/2022 19:14:44] "POST /sns/endpoint HTTP/1.1" 404 -
+45.12.134.108 - - [13/Jan/2022 19:14:49] "GET / HTTP/1.1" 302 -
+185.220.100.243 - - [13/Jan/2022 19:14:50] "GET /relogin HTTP/1.1" 200 -
+45.129.56.200 - - [13/Jan/2022 19:14:53] "GET /favicon.ico HTTP/1.1" 404 -
+72.21.217.130 - - [13/Jan/2022 19:15:15] "POST /sns/endpoint HTTP/1.1" 404 -
