@@ -50,6 +50,7 @@ J-GATI
 
 ### **04. 화면구성**
 ### 1. 로그인 페이지
+
 ![login](https://user-images.githubusercontent.com/93499244/149304046-54a04982-1c4c-498f-8438-91591acfdb75.png)
 
 ### 2.회원가입 페이지
@@ -59,7 +60,7 @@ J-GATI
 ![list](https://user-images.githubusercontent.com/93499244/149304752-5c08b4dd-2e00-476d-865c-17aac0677a19.png)
 
 ### 4.게시글 팝업
-![작성](https://user-images.githubusercontent.com/93499244/149304352-d359b30c-479c-4765-a6fa-e9d537986382.png)
+![글작성](https://user-images.githubusercontent.com/93499244/149305573-98cf4470-0834-4ae7-a362-db849d810ea4.png)
 
 ### 5. 작성자 팝업
 ![작성](https://user-images.githubusercontent.com/93499244/149304352-d359b30c-479c-4765-a6fa-e9d537986382.png)
