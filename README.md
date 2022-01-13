@@ -49,23 +49,23 @@ J-GATI
 3. **모임 삭제 → 모임 삭제기능**
 
 ### **04. 화면구성**
-### 1. 로그인 페이지
 
+ 1. 로그인 페이지
 ![login](https://user-images.githubusercontent.com/93499244/149304046-54a04982-1c4c-498f-8438-91591acfdb75.png)
 
-### 2.회원가입 페이지
+ 2.회원가입 페이지
 ![mem](https://user-images.githubusercontent.com/93499244/149304761-0725f0f5-ca92-47cc-9a71-b80dca8d1394.png)
 
-### 3.카드 리스트 페이지
+ 3.카드 리스트 페이지
 ![list](https://user-images.githubusercontent.com/93499244/149304752-5c08b4dd-2e00-476d-865c-17aac0677a19.png)
 
-### 4.게시글 팝업
+ 4.게시글 팝업
 ![글작성](https://user-images.githubusercontent.com/93499244/149305573-98cf4470-0834-4ae7-a362-db849d810ea4.png)
 
-### 5. 작성자 팝업
+ 5. 작성자 팝업
 ![작성](https://user-images.githubusercontent.com/93499244/149304352-d359b30c-479c-4765-a6fa-e9d537986382.png)
 
-### 6. 참여자 팝업
+ 6. 참여자 팝업
 ![참여](https://user-images.githubusercontent.com/93499244/149304715-1de6cd9c-9c8c-433a-8466-b53df34227f5.png)
 
 ### **05. Outro**
